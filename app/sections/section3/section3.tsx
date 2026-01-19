@@ -35,12 +35,12 @@ const Section3 = () => {
   }
 
   return (
-    <section className="w-full max-w-[91rem] mx-auto px-16 ">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="w-full max-w-[91rem] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 md:py-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left Column - Our Collection Accordion */}
-        <div className="space-y-6">
+        <div className="space-y-6 order-2 lg:order-1">
           {/* Section Title */}
-          <h2 className="text-4xl font-semibold text-[#032E15] mb-8">Our Collection</h2>
+          <h2 className="text-3xl sm:text-4xl font-semibold text-[#032E15] mb-6 sm:mb-8">Our Collection</h2>
 
           {/* Accordion Items */}
           <div className="space-y-4">
@@ -54,16 +54,16 @@ const Section3 = () => {
                 {/* Accordion Header */}
                 <button
                   onClick={() => toggleAccordion(item.id)}
-                  className="w-full flex items-center justify-between p-6 text-left"
+                  className="w-full flex items-center justify-between p-4 sm:p-6 text-left"
                 >
-                  <span className="text-xl font-bold text-[#032E15]">{item.title}</span>
+                  <span className="text-lg sm:text-xl font-bold text-[#032E15]">{item.title}</span>
                   {expandedId === item.id ? (
                     // Minus icon
                     <svg
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
-                      className="transition-transform duration-300"
+                      className="transition-transform duration-300 flex-shrink-0"
                     >
                       <line
                         x1="6"
@@ -81,7 +81,7 @@ const Section3 = () => {
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
-                      className="transition-transform duration-300"
+                      className="transition-transform duration-300 flex-shrink-0"
                     >
                       <line
                         x1="6"
@@ -107,8 +107,8 @@ const Section3 = () => {
 
                 {/* Accordion Content */}
                 {expandedId === item.id && (
-                  <div className="p-6   border-[#CDCDCD]">
-                    <p className="text-base font-light text-[#666666] leading-relaxed">
+                  <div className="p-4 sm:p-6 border-[#CDCDCD]">
+                    <p className="text-sm sm:text-base font-light text-[#666666] leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -119,7 +119,7 @@ const Section3 = () => {
         </div>
 
         {/* Right Column - Collection Image */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center order-1 lg:order-2">
           <div className="relative w-full max-w-[587px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
             <Image
               src="/assets/images/section3/collection_img.png"

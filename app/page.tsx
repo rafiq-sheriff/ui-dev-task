@@ -8,10 +8,10 @@ import Footer from "./scaffold/footer/footer";
 
 export default function Home() {
   return (
-    <main className="bg-white ">
-      <div className="flex flex-col gap-36">
-      <HeroDesktop />
-      <Section2 />
+    <main className="bg-white">
+      <div className="flex flex-col gap-20 sm:gap-28 md:gap-36">
+        <HeroDesktop />
+        <Section2 />
       </div>
       <Section3 />
       <Section4 />
