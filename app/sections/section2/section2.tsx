@@ -59,7 +59,7 @@ const Section2 = () => {
     <section className="w-full max-w-[91rem] mx-auto px-16 py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Left Column - Image Gallery */}
-        <div className="space-y-4 items-center justify-center flex flex-col">
+        <div className="space-y-4 items-center justify-start flex flex-col">
           {/* Main Image Display */}
           <div className="relative bg-gray-200 rounded-2xl overflow-hidden aspect-[3/4] w-[610px] h-[673px] ">
             <Image
@@ -360,7 +360,7 @@ const Section2 = () => {
             <div
               className={`border-2 rounded-lg transition-all ${
                 subscriptionType === 'double'
-                  ? 'border-[#016630] bg-[#016630]/5'
+                  ? 'border-[#B8B8B8]'
                   : 'border-gray-300'
               }`}
             >
@@ -374,26 +374,26 @@ const Section2 = () => {
                     onChange={() => setSubscriptionType('double')}
                     className="w-5 h-5 text-[#016630] focus:ring-[#016630]"
                   />
-                  <span className="font-semibold text-[#032E15]">Double Subscription</span>
+                  <span className="font-light text-xl text-[#032E15]">Double Subscription</span>
                 </div>
-                <div className="text-right">
-                  <div className="font-bold text-[#032E15]">$169.99</div>
-                  <div className="text-sm text-gray-500 line-through">$288</div>
+                <div className="text-right flex flex-row items-center gap-2">
+                  <div className="font-bold text-xl text-[#032E15]">$169.99</div>
+                  <div className="text-xl font-light text-[#B8B8B8] line-through">$288</div>
                 </div>
               </label>
+              <div className="px-12">
+              <hr className="border-[#B8B8B8]" />
+              </div>
 
               {/* Expanded Content for Double Subscription */}
               {subscriptionType === 'double' && (
-                <div className="px-4 pb-4 space-y-4 border-t border-gray-200 pt-4">
+                <div className="px-12 pb-4 space-y-4 pt-4">
                   {/* Choose Fragrance 1 */}
                   <div>
-                    <h3 className="text-base font-light text-[#032E15] mb-3">
+                    <h3 className="text-base font-light text-[#032E15] mb-4">
                       Choose Fragrance 1
-                      <span className="ml-2 text-xs font-normal bg-[#016630] text-white px-2 py-0.5 rounded">
-                        SAVE 50%
-                      </span>
                     </h3>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="items-start justify-start flex flex-row gap-4">
                       {fragrances.map((fragrance) => (
                         <label
                           key={fragrance.id}
@@ -409,7 +409,7 @@ const Section2 = () => {
                           >
                             {/* Best Seller Badge */}
                             {fragrance.isBestSeller && (
-                              <span className="absolute -top-2 right-0 text-[0.5rem] bg-[#016630] text-white px-3 py-0.5 rounded-tl rounded-bl font-bold whitespace-nowrap z-20">
+                              <span className="absolute -top-2 right-0 text-[0.6rem] bg-primary text-white px-2 py-0.4 rounded-tl-[4.95px] rounded-br-[4.95px] font-semibold whitespace-nowrap z-20">
                                 BEST-SELLER
                               </span>
                             )}
@@ -444,13 +444,10 @@ const Section2 = () => {
 
                   {/* Choose Fragrance 2 */}
                   <div>
-                    <h3 className="text-base font-light text-[#032E15] mb-3">
+                    <h3 className="text-base font-light text-[#032E15] mb-4">
                       Choose Fragrance 2
-                      <span className="ml-2 text-xs font-normal bg-[#016630] text-white px-2 py-0.5 rounded">
-                        SAVE 50%
-                      </span>
                     </h3>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="items-start justify-start flex flex-row gap-4">
                       {fragrances.map((fragrance) => (
                         <label
                           key={fragrance.id}
@@ -466,7 +463,7 @@ const Section2 = () => {
                           >
                             {/* Best Seller Badge */}
                             {fragrance.isBestSeller && (
-                              <span className="absolute -top-2 right-0 text-[0.6rem] bg-[#016630] text-white px-2 py-0.5 rounded-tl rounded-bl font-semibold whitespace-nowrap z-20">
+                              <span className="absolute -top-2 right-0 text-[0.6rem] bg-primary text-white px-2 py-0.4 rounded-tl-[4.95px] rounded-br-[4.95px] font-semibold whitespace-nowrap z-20">
                                 BEST-SELLER
                               </span>
                             )}
@@ -588,9 +585,9 @@ const Section2 = () => {
           </a>
 
           {/* Debug info (optional - remove in production) */}
-          <div className="text-xs text-gray-500 p-3 bg-gray-50 rounded">
+          {/* <div className="text-xs text-gray-500 p-3 bg-gray-50 rounded">
             <p>Current URL: {getAddToCartUrl()}</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
