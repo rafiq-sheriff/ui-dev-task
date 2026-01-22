@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/vanilla-version/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/vanilla-version/$1"
+    }
+  ]
+}
+
