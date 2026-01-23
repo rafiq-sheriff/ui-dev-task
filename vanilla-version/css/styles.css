@@ -2024,10 +2024,7 @@ a {
         width: 50%;
     }
 
-    .footer-nav {
-        gap: 8rem;
-    }
-}
+
 
 /* Extra large devices (1280px and up) */
 @media (min-width: 1280px) {
@@ -2089,7 +2086,6 @@ a {
 
     .btn-primary {
         height: 3.06rem;
-        width: 9.06rem;
         font-size: 1.125rem;
     }
 
